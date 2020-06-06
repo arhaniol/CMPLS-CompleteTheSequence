@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class App {
+public class Main {
     final int missing;
     List<Integer> sequence;
     List<Integer> temp;
 
-    public App(int missing, List<Integer> sequence) {
+    public Main(int missing, List<Integer> sequence) {
         this.missing = missing;
         this.sequence = sequence;
     }
@@ -48,7 +48,7 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         int lines = Integer.parseInt(scanner.nextLine());
 
-        App[] parameters = new App[lines];
+        Main[] parameters = new Main[lines];
         for (int i = 0; i < lines; i++) {
             String[] line = scanner.nextLine().split(" ");
             int len = Integer.parseInt(line[0]),
@@ -59,7 +59,7 @@ public class App {
                 sequence.add(scanner.nextInt());
             }
             scanner.nextLine();
-            parameters[i] = new App(missing, sequence);
+            parameters[i] = new Main(missing, sequence);
         }
 
         for (int i = 0; i < lines; i++) {
